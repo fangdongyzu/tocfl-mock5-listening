@@ -62,7 +62,7 @@ const quizData = [
     "image": "images/06.png",
     "transcript": "老師在做什麼？\n(A) 老師在寫字\n(B) 老師在唱歌\n(C) 老師在看書",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "B",
     "remark": ""
   },
   {
@@ -73,7 +73,7 @@ const quizData = [
     "image": "images/07.png",
     "transcript": "這些人在哪裡？\n(A) 在餐廳\n(B) 在教室\n(C) 在圖書館",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "C",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -84,7 +84,7 @@ const quizData = [
     "image": "images/08.png",
     "transcript": "桌子上有什麼？\n(A) 書\n(B) 筆\n(C) 鞋子",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "B",
     "remark": ""
   },
   {
@@ -106,7 +106,7 @@ const quizData = [
     "image": "images/10.png",
     "transcript": "他們在吃什麼？\n(A) 水果\n(B) 餅乾\n(C) 麵條",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "C",
+    "answer": "B",
     "remark": ""
   },
   {
@@ -139,7 +139,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你最喜歡吃什麼水果？\n男：我最喜歡吃香蕉。\n問：這個男生最喜歡吃什麼？\n(A) 蘋果\n(B) 香蕉\n(C) 葡萄",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -161,7 +161,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你怎麼了？\n男：我頭很痛。\n問：這個男的哪裡不舒服？\n(A) 腳\n(B) 頭\n(C) 肚子",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -183,7 +183,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你有沒有哥哥？\n男：有一個。\n問：這個男的有幾個哥哥？\n(A) 一個\n(B) 兩個\n(C) 三個",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -194,7 +194,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n男：你會不會說日文？\n女：不會。\n問：女的會不會說日文？\n(A) 會\n(B) 不會\n(C) 喜歡",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -205,7 +205,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你什麼時候去中國？\n男：下個月。\n問：男的什麼時候去中國？\n(A) 下星期\n(B) 下個月\n(C) 明年",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -227,7 +227,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你常常去圖書館嗎？\n男：我每天都去。\n問：男的多久去一次圖書館？\n(A) 每天\n(B) 常常\n(C) 有時候",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "B",
     "remark": ""
   },
   {
@@ -238,7 +238,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n男：你家住在哪裡？\n女：在學校旁邊。\n問：女的家在哪裡？\n(A) 學校旁邊\n(B) 公園旁邊\n(C) 醫院旁邊",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -260,7 +260,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n男：這個地方可以抽菸嗎？\n女：不可以。\n問：這個地方可以抽菸嗎？\n(A) 可以\n(B) 不可以\n(C) 喜歡",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -271,7 +271,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你會游泳嗎？\n男：會，可是游得不太好。\n問：男的會不會游泳？\n(A) 不會\n(B) 會\n(C) 喜歡",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -282,7 +282,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n男：明天要不要一起去買東西？\n女：好啊。\n問：他們明天要做什麼？\n(A) 去買東西\n(B) 去看電影\n(C) 去打球",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -293,7 +293,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你幾點去上班？\n男：八點。\n問：男的幾點去上班？\n(A) 七點\n(B) 八點\n(C) 九點",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -304,7 +304,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n男：這個菜是誰做的？\n女：我媽媽做的。\n問：這個菜是誰做的？\n(A) 爸爸\n(B) 媽媽\n(C) 哥哥",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -315,7 +315,7 @@ const quizData = [
     "image": "",
     "transcript": "對話\n女：你喜歡看電視嗎？\n男：不太喜歡，我比較喜歡看書。\n問：男的喜歡什麼？\n(A) 看電視\n(B) 看書\n(C) 玩電腦",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -337,7 +337,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n昨天晚上下雨，所以我沒有出去。\n問：昨天晚上為什麼沒出去？\n(A) 因為下雨\n(B) 因為生病\n(C) 因為作業多",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -348,7 +348,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n小王每天早上六點起床，七點去上學。\n問：小王幾點起床？\n(A) 六點\n(B) 七點\n(C) 八點",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -359,7 +359,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n我喜歡冬天，因為冬天可以滑雪。\n問：我為什麼喜歡冬天？\n(A) 因為可以滑雪\n(B) 因為可以游泳\n(C) 因為可以看花",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -370,7 +370,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n小李有兩個哥哥，一個姐姐。\n問：小李有幾個哥哥？\n(A) 一個\n(B) 兩個\n(C) 三個",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -392,7 +392,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n王老師教我們中文。\n問：王老師教什麼？\n(A) 英文\n(B) 中文\n(C) 數學",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "C",
     "remark": ""
   },
   {
@@ -403,7 +403,7 @@ const quizData = [
     "image": "",
     "transcript": "敘述\n這家餐廳的菜很好吃，所以人很多。\n問：為什麼人很多？\n(A) 因為便宜\n(B) 因為菜好吃\n(C) 因為地方大",
     "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "answer": "A",
     "remark": ""
   },
   {
@@ -446,8 +446,8 @@ const quizData = [
     "audio": "sounds/41.mp3",
     "image": "",
     "transcript": "敘述\n昨天我去醫院看朋友。\n問：昨天我去哪裡？\n(A) 公園\n(B) 醫院\n(C) 學校",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "A",
     "remark": ""
   },
   {
@@ -457,8 +457,8 @@ const quizData = [
     "audio": "sounds/42.mp3",
     "image": "",
     "transcript": "敘述\n今天早上我吃了一個麵包。\n問：今天早上我吃了什麼？\n(A) 蘋果\n(B) 麵包\n(C) 魚",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "A",
     "remark": ""
   },
   {
@@ -468,7 +468,7 @@ const quizData = [
     "audio": "sounds/43.mp3",
     "image": "",
     "transcript": "敘述\n我昨天買了一本新書，很有意思。\n問：我昨天買了什麼？\n(A) 書\n(B) 鞋子\n(C) 衣服",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["(A)", "(B)", "(C)", "(D)"],
     "answer": "A",
     "remark": ""
   },
@@ -479,8 +479,8 @@ const quizData = [
     "audio": "sounds/44.mp3",
     "image": "",
     "transcript": "敘述\n我們學校有三個圖書館。\n問：學校有幾個圖書館？\n(A) 一個\n(B) 兩個\n(C) 三個",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "C",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "D",
     "remark": ""
   },
   {
@@ -490,8 +490,8 @@ const quizData = [
     "audio": "sounds/45.mp3",
     "image": "",
     "transcript": "敘述\n哥哥喜歡打籃球，每天都去打。\n問：哥哥喜歡做什麼？\n(A) 打籃球\n(B) 打網球\n(C) 游泳",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "D",
     "remark": ""
   },
   {
@@ -501,8 +501,8 @@ const quizData = [
     "audio": "sounds/46.mp3",
     "image": "",
     "transcript": "敘述\n今天下雪了，外面很冷。\n問：今天的天氣怎麼樣？\n(A) 很熱\n(B) 很冷\n(C) 很舒服",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "D",
     "remark": ""
   },
   {
@@ -512,8 +512,8 @@ const quizData = [
     "audio": "sounds/47.mp3",
     "image": "",
     "transcript": "敘述\n我家前面有一個公園。\n問：我家前面有什麼？\n(A) 公園\n(B) 學校\n(C) 醫院",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "A",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "C",
     "remark": ""
   },
   {
@@ -523,7 +523,7 @@ const quizData = [
     "audio": "sounds/48.mp3",
     "image": "",
     "transcript": "敘述\n這杯咖啡很甜，不太好喝。\n問：這杯咖啡怎麼樣？\n(A) 很甜\n(B) 很苦\n(C) 很鹹",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["(A)", "(B)", "(C)", "(D)"],
     "answer": "A",
     "remark": ""
   },
@@ -534,8 +534,8 @@ const quizData = [
     "audio": "sounds/49.mp3",
     "image": "",
     "transcript": "敘述\n他昨天買了一台新手機。\n問：他昨天買了什麼？\n(A) 電腦\n(B) 手機\n(C) 電視",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "A",
     "remark": ""
   },
   {
@@ -545,8 +545,8 @@ const quizData = [
     "audio": "sounds/50.mp3",
     "image": "",
     "transcript": "敘述\n明天我們要去動物園看動物。\n問：明天我們要去哪裡？\n(A) 公園\n(B) 動物園\n(C) 博物館",
-    "options": ["(A)", "(B)", "(C)"],
-    "answer": "B",
+    "options": ["(A)", "(B)", "(C)", "(D)"],
+    "answer": "D",
     "remark": ""
   }
 ];
