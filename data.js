@@ -441,7 +441,7 @@ const quizData = [
   },
   {
     "id": 41,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/41.mp3",
     "image": "",
@@ -452,7 +452,7 @@ const quizData = [
   },
   {
     "id": 42,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/42.mp3",
     "image": "",
@@ -463,7 +463,7 @@ const quizData = [
   },
   {
     "id": 43,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/43.mp3",
     "image": "",
@@ -474,7 +474,7 @@ const quizData = [
   },
   {
     "id": 44,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/44.mp3",
     "image": "",
@@ -485,7 +485,7 @@ const quizData = [
   },
   {
     "id": 45,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/45.mp3",
     "image": "",
@@ -496,7 +496,7 @@ const quizData = [
   },
   {
     "id": 46,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/46.mp3",
     "image": "",
@@ -507,7 +507,7 @@ const quizData = [
   },
   {
     "id": 47,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/47.mp3",
     "image": "",
@@ -518,7 +518,7 @@ const quizData = [
   },
   {
     "id": 48,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/48.mp3",
     "image": "",
@@ -529,7 +529,7 @@ const quizData = [
   },
   {
     "id": 49,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/49.mp3",
     "image": "",
@@ -540,7 +540,7 @@ const quizData = [
   },
   {
     "id": 50,
-    "part": 3,
+    "part": 4,
     "question": "",
     "audio": "sounds/50.mp3",
     "image": "",
