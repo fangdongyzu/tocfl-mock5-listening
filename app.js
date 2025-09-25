@@ -1,3 +1,6 @@
+// keep a global reference to the currently playing audio
+let currentAudio = null;
+
 function AudioPlayer({ src }) {
   const audioRef = React.useRef(null);
   const [duration, setDuration] = React.useState(0);
@@ -10,7 +13,15 @@ function AudioPlayer({ src }) {
 
     const onLoaded = () => setDuration(a.duration || 0);
     const onTime = () => setTime(a.currentTime || 0);
-    const onPlay = () => setIsPlaying(true);
+    const onPlay = () => {
+      // pause and reset previously playing audio if exists
+      if (currentAudio && currentAudio !== a) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;  // reset to start
+      }
+      currentAudio = a;
+      setIsPlaying(true);
+    };
     const onPause = () => setIsPlaying(false);
     const onEnded = () => setIsPlaying(false);
 
@@ -33,7 +44,7 @@ function AudioPlayer({ src }) {
     const a = audioRef.current;
     if (!a) return;
     const target = Math.max(0, Math.min(a.duration || 0, a.currentTime + seconds));
-    a.currentTime = target;  // 🔥 removed a.play()
+    a.currentTime = target;
   };
 
   const togglePlayPause = () => {
@@ -42,13 +53,17 @@ function AudioPlayer({ src }) {
     if (isPlaying) {
       a.pause();
     } else {
+      // stop and reset any other audio before starting this one
+      if (currentAudio && currentAudio !== a) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
       a.play();
     }
   };
 
   return (
     <div>
-      {/* remove default controls if you only want custom buttons */}
       <audio ref={audioRef} src={src} style={{ width: "100%" }} />
       <div className="controls small">
         <button onClick={() => seek(-5)}>⏪ -5s</button>
@@ -116,7 +131,7 @@ function QuizApp() {
 
   return (
     <div className="quiz-container">
-      <h1>MOCK 5 Listening</h1>
+      <h1>MOCK 4 Listening</h1>
 
       {!submitted && (
         <div className="part-selection">
