@@ -182,7 +182,7 @@ function QuizApp() {
       ))}
 
       {!submitted && filteredQuestions.length > 0 && (
-        <button onClick={handleSubmit} style={{ marginTop: 10 }}>Submit</button>
+        <button id = "submit-btn" onClick={handleSubmit} style={{ marginTop: 10 }}>Submit</button>
       )}
 
       {showModal && (
