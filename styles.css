@@ -1,4 +1,8 @@
-/* --- Core Layout from style_format.css --- */
+/* --- Core Layout --- */
+html {
+    scroll-behavior: auto;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +43,7 @@ header p {
     font-size: 1.3em;
 }
 
-/* Part Selection */
+/* --- Part Selection --- */
 .part-selection {
     background: white;
     padding: 30px 25px;
@@ -134,7 +138,7 @@ header p {
     background: #229954;
 }
 
-/* Quiz Container */
+/* --- Quiz Area --- */
 .quiz-container {
     background: white;
     padding: 25px;
@@ -178,74 +182,19 @@ header p {
 }
 
 .question-image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 500px;
+    width: 100%;
+    max-width: 765px;
+    height: 510px;
     object-fit: contain;
     background: white;
     border: 2px solid #bdc3c7;
     border-radius: 8px;
     display: block;
     margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Options */
-.options {
-    display: grid;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.option {
-    display: flex;
-    align-items: center;
-    padding: 18px 20px;
-    background: white;
-    border: 2px solid #bdc3c7;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s;
-    min-height: 60px;
-}
-
-.option:hover {
-    background: #ecf0f1;
-    border-color: #3498db;
-}
-
-.option.selected {
-    background: #3498db;
-    color: white;
-    border-color: #2980b9;
-}
-
-.option-letter {
-    width: 32px;
-    height: 32px;
-    border: 2px solid #3498db;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    font-weight: bold;
-    color: #3498db;
-    background: white;
-    transition: all 0.3s;
-    font-size: 1.1em;
-}
-
-.option.selected .option-letter {
-    background: white;
-    color: #3498db;
-}
-
-.option-text {
-    flex: 1;
-    font-size: 1.2em;
-}
-
-/* Audio Player Custom Styling */
+/* --- Audio Player --- */
 .audio-wrapper {
     margin: 15px 0;
     padding: 15px;
@@ -319,13 +268,228 @@ header p {
     border-radius: 6px;
     margin-top: 10px;
     font-size: 1.38em;
-    /* Increased size for better readability */
     white-space: pre-line;
     border-left: 4px solid #f1c40f;
     line-height: 1.6;
 }
 
-/* Modal / Results */
+/* --- Options --- */
+.options {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-height: 60px;
+}
+
+.option:hover {
+    background: #ecf0f1;
+    border-color: #3498db;
+}
+
+.option.selected {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+/* Removed option-letter styles as element is removed from JS */
+
+.option-text {
+    flex: 1;
+    font-size: 1.2em;
+}
+
+/* --- Navigation & Buttons --- */
+.quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px solid #ecf0f1;
+    gap: 15px;
+}
+
+.nav-btn,
+.submit-btn,
+.restart-btn {
+    padding: 18px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+    min-width: 140px;
+    min-height: 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.nav-btn {
+    background: #3498db;
+    color: white;
+}
+
+.nav-btn:hover {
+    background: #2980b9;
+}
+
+.submit-btn,
+.restart-btn {
+    background: #f39c12;
+    color: white;
+}
+
+.submit-btn:hover,
+.restart-btn:hover {
+    background: #e67e22;
+}
+
+/* ========================================= */
+/* RESULTS / MODAL STYLES (Requested)        */
+/* ========================================= */
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.home-btn {
+    padding: 18px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s;
+    min-width: 140px;
+    min-height: 55px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: #2c3e50;
+    color: white;
+}
+
+.home-btn:hover {
+    background: #1a252f;
+}
+
+.results-container {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.score {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+.score p {
+    font-size: 1.4em;
+    margin: 15px 0;
+}
+
+#score {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+#percentage {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1.4em;
+}
+
+.part-breakdown {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.breakdown-item {
+    margin: 15px 0;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    background: white;
+}
+
+.breakdown-item h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.breakdown-item div {
+    font-size: 1.1em;
+}
+
+.results-details {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.result-item {
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 4px solid #bdc3c7;
+}
+
+.result-item.correct {
+    background: #d5f4e6;
+    border-left-color: #27ae60;
+}
+
+.result-item.incorrect {
+    background: #fadbd8;
+    border-left-color: #e74c3c;
+}
+
+.result-item.unanswered {
+    background: #f4f6f6;
+    border-left-color: #95a5a6;
+}
+
+.result-question {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.result-answer {
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+/* Modal Overrides */
 .modal {
     position: fixed;
     inset: 0;
@@ -338,7 +502,7 @@ header p {
 
 .modal-content {
     background: white;
-    padding: 30px;
+    padding: 30px 25px;
     border-radius: 10px;
     max-width: 800px;
     width: 90%;
@@ -347,20 +511,13 @@ header p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal-buttons {
+/* Filters */
+.filter-section {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin-bottom: 30px;
     flex-wrap: wrap;
-}
-
-.result-item {
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border-left: 4px solid #bdc3c7;
-    background: #f8f9fa;
-    font-size: 1em;
 }
 
 .result-filter-btn {
@@ -372,6 +529,7 @@ header p {
     color: #2c3e50;
     font-weight: bold;
     font-size: 0.9em;
+    transition: all 0.2s;
 }
 
 .result-filter-btn:hover {
@@ -383,67 +541,23 @@ header p {
     color: white;
 }
 
-/* Navigation & Footer Buttons */
-.quiz-footer {
-    display: flex;
-    justify-content: flex-start; /* Next button aligns left */
-    margin-top: 30px;
-}
-
-.nav-btn {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.13em;
-    font-weight: bold;
-    transition: background 0.3s;
-    background: #3498db;
-    color: white;
-}
-
-.nav-btn:hover {
-    background: #2980b9;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 20px;
-    background: #2980b9;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.13em;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-/* If Submit is inside quiz-footer, ensure it fills the space if needed, or keep standard look */
-.quiz-footer .submit-btn {
-    margin-top: 0;
-}
-
-.submit-btn:hover {
-    background: #2471a3;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        padding: 15px;
     }
-
-    .part-checkbox {
-        min-height: 60px;
-        font-size: 1em;
+    
+    .question-image img {
+        height: 255px;
+        max-height: 255px;
     }
-
-    .option {
-        min-height: 50px;
+    
+    .quiz-footer, .result-actions {
+        flex-direction: column;
     }
-
-    .option-text {
-        font-size: 1em;
+    
+    .nav-btn, .submit-btn, .restart-btn, .home-btn {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
