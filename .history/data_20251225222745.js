@@ -5,8 +5,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/01.mp3",
     "image": "images/01.png",
-    "transcript": "圖片裡有幾個學生？\n(A) 三個\n(B) 四個\n(C) 七個",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "圖片裡有幾個學生？\n 三個\n 四個\n(C) 七個",
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -16,8 +16,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/02.mp3",
     "image": "images/02.png",
-    "transcript": "提問 這個人在做什麼運動？\n(A) 他在打籃球\n(B) 他在打網球\n(C) 他在打棒球",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 這個人在做什麼運動？\n 他在打籃球\n 他在打網球\n(C) 他在打棒球",
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -27,8 +27,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/03.mp3",
     "image": "images/03.png",
-    "transcript": "提問 請問小美喜歡做什麼？\n(A) 她喜歡打掃\n(B) 她喜歡做菜\n(C) 她喜歡洗衣服",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 請問小美喜歡做什麼？\n 她喜歡打掃\n 她喜歡做菜\n(C) 她喜歡洗衣服",
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -38,8 +38,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/04.mp3",
     "image": "images/04.png",
-    "transcript": "提問 弟弟今天怎麼沒去上課？\n(A) 他腳痛\n(B) 他頭痛\n(C) 他肚子痛",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 弟弟今天怎麼沒去上課？\n 他腳痛\n 他頭痛\n(C) 他肚子痛",
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -49,8 +49,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/05.mp3",
     "image": "images/05.png",
-    "transcript": "提問 小明給美美什麼？\n(A) 水果\n(B) 蛋糕\n(C) 餃子",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 小明給美美什麼？\n 水果\n 蛋糕\n(C) 餃子",
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -60,8 +60,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/06.mp3",
     "image": "images/06.png",
-    "transcript": "提問 這位先生現在在做什麼？\n(A) 他在教室上網\n(B) 他在辦公室工作\n(C) 他在辦公室上網",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 這位先生現在在做什麼？\n 他在教室上網\n 他在辦公室工作\n(C) 他在辦公室上網",
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -71,8 +71,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/07.mp3",
     "image": "images/07.png",
-    "transcript": "提問 小女孩在做什麼？\n(A) 她在寄信\n(B) 她在寫信\n(C) 她在打電話",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 小女孩在做什麼？\n 她在寄信\n 她在寫信\n(C) 她在打電話",
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -82,8 +82,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/08.mp3",
     "image": "images/08.png",
-    "transcript": "提問 圖片裡有什麼？\n(A) 一枝鉛筆和兩本字典\n(B) 一本字典和兩支毛筆\n(C) 一本雜誌和兩本課本",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 圖片裡有什麼？\n 一枝鉛筆和兩本字典\n 一本字典和兩支毛筆\n(C) 一本雜誌和兩本課本",
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -93,8 +93,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/09.mp3",
     "image": "images/09.png",
-    "transcript": "提問 他們在做什麼？\n(A) 他們一邊看電視，一邊吃東西\n(B) 他們一邊吃東西，一邊和狗玩\n(C) 他們一邊和狗玩，一邊看電視",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 他們在做什麼？\n 他們一邊看電視，一邊吃東西\n 他們一邊吃東西，一邊和狗玩\n(C) 他們一邊和狗玩，一邊看電視",
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -104,8 +104,8 @@ const quizData = [
     "question": "",
     "audio": "sounds/10.mp3",
     "image": "images/10.png",
-    "transcript": "提問 這裡有哪些動物？\n(A) 這裡都是馬\n(B) 這裡有馬也有牛\n(C) 這裡只有牛沒有馬",
-    "options": ["(A)", "(B)", "(C)"],
+    "transcript": "提問 這裡有哪些動物？\n 這裡都是馬\n 這裡有馬也有牛\n(C) 這裡只有牛沒有馬",
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -116,7 +116,7 @@ const quizData = [
     "audio": "sounds/11.mp3",
     "image": "images/11.png",
     "transcript": "男 剛剛那個年輕人在飯店裡吃了什麼食物？\n女 他吃了一碗麵。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -127,7 +127,7 @@ const quizData = [
     "audio": "sounds/12.mp3",
     "image": "images/12.png",
     "transcript": "女 你要不要去博物館？\n男 好啊！",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -138,7 +138,7 @@ const quizData = [
     "audio": "sounds/13.mp3",
     "image": "images/13.png",
     "transcript": "男 這是您的巧克力蛋糕，請問還需要什麼嗎？\n女 請再給我一個湯匙，我們要一起吃。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -149,7 +149,7 @@ const quizData = [
     "audio": "sounds/14.mp3",
     "image": "images/14.png",
     "transcript": "女 我昨天打電話給你，你怎麼沒接電話？\n男 我的手機壞了。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -160,7 +160,7 @@ const quizData = [
     "audio": "sounds/15.mp3",
     "image": "images/15.png",
     "transcript": "男 哪一個是妳的妹妹？\n女 那個短頭髮，戴眼鏡的是我妹妹。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -171,7 +171,7 @@ const quizData = [
     "audio": "sounds/16.mp3",
     "image": "images/16.png",
     "transcript": "女 這家店為什麼這麼多人在排隊？\n男 因為這裡的衣服很便宜，很多人來這裡買衣服。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -182,7 +182,7 @@ const quizData = [
     "audio": "sounds/17.mp3",
     "image": "images/17.png",
     "transcript": "男 聽說這家店的牛排和漢堡很好吃，妳要試一試嗎？\n女 我不能吃肉，請幫我點一份青菜。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -193,7 +193,7 @@ const quizData = [
     "audio": "sounds/18.mp3",
     "image": "images/18.png",
     "transcript": "男 媽媽，我找了客廳和房間，怎麼都沒看見我新買的小說？\n女 你昨天放在浴室裡了。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -204,7 +204,7 @@ const quizData = [
     "audio": "sounds/19.mp3",
     "image": "images/19.png",
     "transcript": "女 我上次送你的畫你放在哪裡了？\n男 我把它掛在冰箱後面的牆上了。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -215,7 +215,7 @@ const quizData = [
     "audio": "sounds/20.mp3",
     "image": "images/20.png",
     "transcript": "男 聽說小美要表演，是鋼琴表演嗎？\n女 她以前表演過鋼琴，但是這次是吉他表演。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -226,7 +226,7 @@ const quizData = [
     "audio": "sounds/21.mp3",
     "image": "images/21.png",
     "transcript": "女 已經晚上九點了，辦公室裡怎麼還有人？\n男 是蘇經理和小蔡，他們兩個還在開會。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -237,7 +237,7 @@ const quizData = [
     "audio": "sounds/22.mp3",
     "image": "images/22.png",
     "transcript": "男 他們兩個人都很生氣，不知道他們在說什麼？\n女 他們一討論小孩的事情，就會不太開心。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -248,7 +248,7 @@ const quizData = [
     "audio": "sounds/23.mp3",
     "image": "images/23.png",
     "transcript": "女 為什麼他今天沒來上班？\n男 因為他在家裡準備明天的報告。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -259,7 +259,7 @@ const quizData = [
     "audio": "sounds/24.mp3",
     "image": "images/24.png",
     "transcript": "女 你們在山上新租的房子怎麼樣？\n男 房子很不錯。樓下房間有一個大窗戶。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -270,7 +270,7 @@ const quizData = [
     "audio": "sounds/25.mp3",
     "image": "images/25.png",
     "transcript": "男 美美，我的那件短袖襯衫呢？\n女 我剛洗好，現在還沒乾喔！",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -281,7 +281,7 @@ const quizData = [
     "audio": "sounds/26.mp3",
     "image": "images/26.png",
     "transcript": "男 聽說小明家附近的風景很漂亮，是嗎？\n女 是啊！但是那裡冬天的溫度很低，你去找他要穿暖一點。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -292,7 +292,7 @@ const quizData = [
     "audio": "sounds/27.mp3",
     "image": "images/27.png",
     "transcript": "女 你覺得認識臺灣最好的方法是什麼？\n男 看書、看電視介紹都不錯，但是最好的方法就是你自己去旅行。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -303,29 +303,29 @@ const quizData = [
     "audio": "sounds/28.mp3",
     "image": "images/28.png",
     "transcript": "男 小美，你的新家怎麼樣？\n女 別說了，我搬到公寓去，結果樓上的小孩經常往下丟垃圾，環境非常髒。",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
   {
     "id": 29,
-    "part": 3,
+    "part": 2,
     "question": "",
     "audio": "sounds/29.mp3",
     "image": "images/29.png",
     "transcript": "男 我們等一下三點在書店門口前見面嗎？\n女 我覺得有一點晚，我們可以早半個小時嗎？\n男 好啊，那一樣在書店門口前見嗎？\n女 對，書店門口見！\n男 請問他們幾點見面？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
   {
     "id": 30,
-    "part": 3,
+    "part": 2,
     "question": "",
     "audio": "sounds/30.mp3",
     "image": "images/30.png",
     "transcript": "男 請問妳要找什麼書？\n女 我正在找介紹日本風景的旅遊書。\n男 妳看到上面號碼了嗎？如果妳要找日本的書，那在中間 2 號。\n女 謝謝。\n男 請問介紹日本風景的書放在哪裡？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -336,7 +336,7 @@ const quizData = [
     "audio": "sounds/31.mp3",
     "image": "images/31.png",
     "transcript": "男 來這家店的人真多。\n女 是啊！這家冰淇淋店有很多種味道的冰淇淋。\n男 我想吃巧克力和牛奶口味的，我們進去吃吧！\n女 好，我請客。\n男 請問他們等一下要做什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -347,7 +347,7 @@ const quizData = [
     "audio": "sounds/32.mp3",
     "image": "images/32.png",
     "transcript": "男 照片裡這些人是妳的家人嗎？你們在哪裡拍的？\n女 是啊，這是我的爸爸媽媽。這張照片是在船上拍的。\n男 這個戴帽子的人是誰？\n女 這是我爺爺。他已經七十歲了。\n男 請問他們說的是哪一張照片？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -358,7 +358,7 @@ const quizData = [
     "audio": "sounds/33.mp3",
     "image": "images/33.png",
     "transcript": "男 要不要喝點兒啤酒？\n女 不行，我等一下要開車。\n男 那，喝點兒汽水吧？\n女 我還是喝茶好了。\n男 請問這位小姐決定喝什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -369,7 +369,7 @@ const quizData = [
     "audio": "sounds/34.mp3",
     "image": "images/34.png",
     "transcript": "男 妳的房間這麼亂，為什麼不整理？\n女 我本來上星期日要整理房間，但是我的經理要我去公司。\n男 那妳今天看了一個下午的書，為什麼不打掃？\n女 好啦！我明天會整理。\n男 請問這位小姐明天打算做什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -380,7 +380,7 @@ const quizData = [
     "audio": "sounds/35.mp3",
     "image": "images/35.png",
     "transcript": "男 這裡的天氣怎麼樣？\n女 冬天太冷，夏天太熱。\n男 那麼春天呢？\n女 常常下雨。\n男 請問這裡的春天常常怎麼樣？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -391,7 +391,7 @@ const quizData = [
     "audio": "sounds/36.mp3",
     "image": "images/36.png",
     "transcript": "男 我想找王先生。\n女 請問您和他約好了嗎？\n男 沒有。是他要我來找他的。\n女 您先留下您的電話，我會請王先生打電話給您。\n男 請問這位小姐要這位先生做什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "C",
     "remark": ""
   },
@@ -402,7 +402,7 @@ const quizData = [
     "audio": "sounds/37.mp3",
     "image": "images/37.png",
     "transcript": "男 小春的生日快到了，我們一起送他禮物，怎麼樣？\n女 好啊！他喜歡畫畫，我們可以送他畫畫用的筆。\n男 嗯，還可以送他放筆的袋子。\n女 好啊，今天下課以後我們一起去買禮物吧。\n男 請問他們決定送什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "A",
     "remark": ""
   },
@@ -413,7 +413,7 @@ const quizData = [
     "audio": "sounds/38.mp3",
     "image": "images/38.png",
     "transcript": "男 妳看電視新聞了嗎？有一個很可怕的消息。\n女 什麼可怕的消息？\n男 妳快點開電視，我剛剛才看到的。\n女 我上網看過新聞了，可是沒看到什麼可怕的消息。\n男 請問這位先生從哪裡知道可怕的消息？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -424,7 +424,7 @@ const quizData = [
     "audio": "sounds/39.mp3",
     "image": "images/39.png",
     "transcript": "男 妳想吃什麼?\n女 聽說這裡的北京烤鴨很好吃。\n男 我們點一隻烤鴨，一碗酸辣湯，怎麼樣？\n女 再點一個糖醋魚吧！\n男 請問他們應該在什麼地方？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -435,7 +435,7 @@ const quizData = [
     "audio": "sounds/40.mp3",
     "image": "images/40.png",
     "transcript": "男 已經很晚了，妳怎麼還在這裡？\n女 經理說明天要和他一起討論，我今天一定要準備好。\n男 我不放心妳一個人回家，還是等會兒我開車送妳回去。\n女 謝謝你！但是我今天晚上打算睡在公司裡。\n男 請問這位小姐今天晚上打算做什麼？",
-    "options": ["(A)", "(B)", "(C)"],
+    "options": ["", "", "(C)"],
     "answer": "B",
     "remark": ""
   },
@@ -546,7 +546,7 @@ const quizData = [
     "image": "",
     "transcript": "男 小姐，這是昨天跟你們買的牛奶，味道有點奇怪，我想換一瓶新的。\n女 請問您帶了發票嗎？\n男 喔，我沒帶來。\n女 我們要看到發票，才能換東西，不好意思。\n女 這位小姐的意思是什麼？",
     "options": ["（A）她要把錢還給客人", "（B）東西賣出去就不能換了", "（C）她沒有東西可以換給客人", "（D）沒有發票，就不能換東西"],
-    "answer": "D",
+    "answer": "（D）沒有發票，就不能換東西",
     "remark": ""
   }
 ];

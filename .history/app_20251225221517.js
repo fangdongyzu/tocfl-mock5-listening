@@ -151,12 +151,11 @@ function QuizApp() {
       setTimeout(() => {
         const el = document.getElementById('quiz-area');
         if (el) {
-          // behavior: 'auto' ensures an instant jump (no animation) to the top
-          el.scrollIntoView({ behavior: 'auto', block: 'start' });
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 0);
+      }, 100);
     }
-  }, [started, currentPartIndex]);
+  }, [started, currentPartIndex]); // Re-added currentPartIndex to trigger scroll on part change
 
   const handlePartToggle = (part) => {
     setSelectedParts(prev =>
@@ -244,7 +243,7 @@ function QuizApp() {
     <div className="container">
       <header>
         <h1>MOCK 5 Listening</h1>
-        <p>TOCFL Listening Practice</p>
+        <p>TOEIC Listening Practice</p>
       </header>
 
       {!submitted && !started && (
@@ -296,12 +295,14 @@ function QuizApp() {
               <div className="options">
                 {q.options.map((opt, idx) => {
                   const isSelected = answers[q.id] === opt;
+                  const letter = ['A','B','C','D'][idx];
                   return (
                     <div 
                       key={opt} 
                       className={`option ${isSelected ? 'selected' : ''}`}
                       onClick={() => handleChange(q.id, opt)}
                     >
+                      <div className="option-letter">{letter}</div>
                       <div className="option-text">{opt}</div>
                     </div>
                   );

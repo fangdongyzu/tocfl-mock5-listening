@@ -296,12 +296,14 @@ function QuizApp() {
               <div className="options">
                 {q.options.map((opt, idx) => {
                   const isSelected = answers[q.id] === opt;
+                  const letter = ['A','B','C','D'][idx];
                   return (
                     <div 
                       key={opt} 
                       className={`option ${isSelected ? 'selected' : ''}`}
                       onClick={() => handleChange(q.id, opt)}
                     >
+                      <div className="option-letter">{letter}</div>
                       <div className="option-text">{opt}</div>
                     </div>
                   );
@@ -325,7 +327,7 @@ function QuizApp() {
           <div className="quiz-footer">
             {!isLastPart ? (
                <button className="nav-btn next-part-btn" onClick={handleNextPart}>
-                 Next Part
+                 Next Part ⏩
                </button>
             ) : (
                <button className="submit-btn" onClick={handleSubmit}>

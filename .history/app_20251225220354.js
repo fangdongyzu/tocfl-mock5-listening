@@ -1,6 +1,7 @@
 // Global audio reference
 let currentAudio = null;
 
+// Updated Part Names with Colons
 const PART_NAMES = {
   1: "Part 1: Picture Description",
   2: "Part 2: Question Response",
@@ -114,7 +115,7 @@ function AudioPlayer({ src }) {
 
 function QuizApp() {
   const [selectedParts, setSelectedParts] = React.useState([]);
-  const [currentPartIndex, setCurrentPartIndex] = React.useState(0);
+  const [currentPartIndex, setCurrentPartIndex] = React.useState(0); // Track current part
   const [answers, setAnswers] = React.useState({});
   const [submitted, setSubmitted] = React.useState(false);
   const [score, setScore] = React.useState(0);
@@ -129,32 +130,32 @@ function QuizApp() {
 
   const allParts = Array.from(new Set(quizData.map(q => q.part))).sort((a,b)=>a-b);
 
+  // Sort selected parts to ensure 1, 2, 3, 4 order
   const sortedSelectedParts = React.useMemo(() => {
     return [...selectedParts].sort((a, b) => a - b);
   }, [selectedParts]);
 
+  // ALL questions for ALL selected parts (used for scoring and summary)
   const allSelectedQuestions = React.useMemo(() => {
      return sortedSelectedParts.length === 0
       ? []
       : quizData.filter(q => sortedSelectedParts.includes(q.part));
   }, [sortedSelectedParts]);
 
+  // Questions for the CURRENT VIEW only
   const currentPartQuestions = React.useMemo(() => {
     if (sortedSelectedParts.length === 0) return [];
     const activePart = sortedSelectedParts[currentPartIndex];
     return quizData.filter(q => q.part === activePart);
   }, [sortedSelectedParts, currentPartIndex]);
 
-  // Scroll to questions when practice starts OR part changes
+  // Scroll to questions when practice starts or part changes
   React.useEffect(() => {
     if (started) {
       setTimeout(() => {
         const el = document.getElementById('quiz-area');
-        if (el) {
-          // behavior: 'auto' ensures an instant jump (no animation) to the top
-          el.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
-      }, 0);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   }, [started, currentPartIndex]);
 
@@ -165,7 +166,7 @@ function QuizApp() {
     setAnswers({});
     setSubmitted(false);
     setStarted(false);
-    setCurrentPartIndex(0);
+    setCurrentPartIndex(0); // Reset index on selection change
   };
 
   const handleChange = (qId, option) => {
@@ -190,6 +191,7 @@ function QuizApp() {
 
     if (!window.confirm("Are you sure you want to submit?")) return;
 
+    // Calculate score based on ALL selected questions, not just current page
     let newScore = 0;
     allSelectedQuestions.forEach(q => {
       const selected = answers[q.id];
@@ -203,6 +205,7 @@ function QuizApp() {
   };
 
   const getFilteredResults = () => {
+    // Filter from ALL selected questions
     const source = allSelectedQuestions;
     switch(filterType) {
       case 'correct':
@@ -238,15 +241,17 @@ function QuizApp() {
     );
   };
 
+  // Determine if we are on the last selected part
   const isLastPart = currentPartIndex === sortedSelectedParts.length - 1;
 
   return (
     <div className="container">
       <header>
         <h1>MOCK 5 Listening</h1>
-        <p>TOCFL Listening Practice</p>
+        <p>TO Listening Practice</p>
       </header>
 
+      {/* Part Selection - Hides when started or submitted */}
       {!submitted && !started && (
         <div className="part-selection">
           <h2>Select Parts</h2>
@@ -272,9 +277,11 @@ function QuizApp() {
         </div>
       )}
 
+      {/* Quiz Area - Shows when started */}
       {started && !submitted && (
         <div id="quiz-area" className="quiz-container">
           
+          {/* Current Part Header */}
           <h2 className="current-part-header">
             {PART_NAMES[sortedSelectedParts[currentPartIndex]]}
           </h2>
@@ -296,12 +303,14 @@ function QuizApp() {
               <div className="options">
                 {q.options.map((opt, idx) => {
                   const isSelected = answers[q.id] === opt;
+                  const letter = ['A','B','C','D'][idx];
                   return (
                     <div 
                       key={opt} 
                       className={`option ${isSelected ? 'selected' : ''}`}
                       onClick={() => handleChange(q.id, opt)}
                     >
+                      <div className="option-letter">{letter}</div>
                       <div className="option-text">{opt}</div>
                     </div>
                   );
@@ -322,10 +331,11 @@ function QuizApp() {
             </div>
           ))}
 
+          {/* Navigation Controls */}
           <div className="quiz-footer">
             {!isLastPart ? (
                <button className="nav-btn next-part-btn" onClick={handleNextPart}>
-                 Next Part
+                 Next Part ⏩
                </button>
             ) : (
                <button className="submit-btn" onClick={handleSubmit}>
@@ -382,13 +392,13 @@ function QuizApp() {
             </div>
 
             <div className="modal-buttons" style={{ justifyContent: 'center', marginTop: 30, borderTop: '1px solid #eee', paddingTop: 20 }}>
-              {/* Retake Test */}
-              <button className="submit-btn" style={{ background: '#e67e22', marginBottom: '10px' }} onClick={() => window.location.reload()}>
-                Retake Test
-              </button>
-              {/* Go to Home Page */}
+              {/* Redirect to Home Page */}
               <button className="submit-btn" style={{ background: '#7f8c8d' }} onClick={() => window.location.href = "https://fangdongyzu.github.io/tocflmock/"}>
                 Go to Home Page
+              </button>
+              {/* Retake Test */}
+              <button className="submit-btn" style={{ background: '#e67e22' }} onClick={() => window.location.reload()}>
+                Retake Test
               </button>
             </div>
           </div>

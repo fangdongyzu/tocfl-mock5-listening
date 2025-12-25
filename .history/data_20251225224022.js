@@ -320,7 +320,7 @@ const quizData = [
   },
   {
     "id": 30,
-    "part": 3,
+    "part": 2,
     "question": "",
     "audio": "sounds/30.mp3",
     "image": "images/30.png",

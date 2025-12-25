@@ -145,18 +145,15 @@ function QuizApp() {
     return quizData.filter(q => q.part === activePart);
   }, [sortedSelectedParts, currentPartIndex]);
 
-  // Scroll to questions when practice starts OR part changes
+  // Scroll ONLY when practice starts, NOT when switching parts
   React.useEffect(() => {
     if (started) {
       setTimeout(() => {
         const el = document.getElementById('quiz-area');
-        if (el) {
-          // behavior: 'auto' ensures an instant jump (no animation) to the top
-          el.scrollIntoView({ behavior: 'auto', block: 'start' });
-        }
-      }, 0);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
-  }, [started, currentPartIndex]);
+  }, [started]); // Removed currentPartIndex from dependencies
 
   const handlePartToggle = (part) => {
     setSelectedParts(prev =>
@@ -180,6 +177,7 @@ function QuizApp() {
           currentAudio.currentTime = 0;
       }
       setCurrentPartIndex(prev => prev + 1);
+      // No scroll logic here
   };
 
   const handleSubmit = () => {
@@ -296,12 +294,14 @@ function QuizApp() {
               <div className="options">
                 {q.options.map((opt, idx) => {
                   const isSelected = answers[q.id] === opt;
+                  const letter = ['A','B','C','D'][idx];
                   return (
                     <div 
                       key={opt} 
                       className={`option ${isSelected ? 'selected' : ''}`}
                       onClick={() => handleChange(q.id, opt)}
                     >
+                      <div className="option-letter">{letter}</div>
                       <div className="option-text">{opt}</div>
                     </div>
                   );
@@ -325,7 +325,7 @@ function QuizApp() {
           <div className="quiz-footer">
             {!isLastPart ? (
                <button className="nav-btn next-part-btn" onClick={handleNextPart}>
-                 Next Part
+                 Next Part ⏩
                </button>
             ) : (
                <button className="submit-btn" onClick={handleSubmit}>
@@ -382,7 +382,7 @@ function QuizApp() {
             </div>
 
             <div className="modal-buttons" style={{ justifyContent: 'center', marginTop: 30, borderTop: '1px solid #eee', paddingTop: 20 }}>
-              {/* Retake Test */}
+              {/* Retake Test - MOVED TO TOP */}
               <button className="submit-btn" style={{ background: '#e67e22', marginBottom: '10px' }} onClick={() => window.location.reload()}>
                 Retake Test
               </button>

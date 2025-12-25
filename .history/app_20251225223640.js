@@ -302,6 +302,7 @@ function QuizApp() {
                       className={`option ${isSelected ? 'selected' : ''}`}
                       onClick={() => handleChange(q.id, opt)}
                     >
+                      <div className="option-letter">{letter}</div>
                       <div className="option-text">{opt}</div>
                     </div>
                   );

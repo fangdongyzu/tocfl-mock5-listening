@@ -309,7 +309,7 @@ const quizData = [
   },
   {
     "id": 29,
-    "part": 3,
+    "part": 2,
     "question": "",
     "audio": "sounds/29.mp3",
     "image": "images/29.png",
@@ -320,7 +320,7 @@ const quizData = [
   },
   {
     "id": 30,
-    "part": 3,
+    "part": 2,
     "question": "",
     "audio": "sounds/30.mp3",
     "image": "images/30.png",
@@ -546,7 +546,7 @@ const quizData = [
     "image": "",
     "transcript": "男 小姐，這是昨天跟你們買的牛奶，味道有點奇怪，我想換一瓶新的。\n女 請問您帶了發票嗎？\n男 喔，我沒帶來。\n女 我們要看到發票，才能換東西，不好意思。\n女 這位小姐的意思是什麼？",
     "options": ["（A）她要把錢還給客人", "（B）東西賣出去就不能換了", "（C）她沒有東西可以換給客人", "（D）沒有發票，就不能換東西"],
-    "answer": "D",
+    "answer": "（D",
     "remark": ""
   }
 ];
