@@ -1,4 +1,3 @@
-// Global audio reference
 let currentAudio = null;
 
 const PART_NAMES = {
@@ -8,6 +7,14 @@ const PART_NAMES = {
   4: "Part 4: Short Talks"
 };
 
+function getQuizData() {
+  if (Array.isArray(window.quizData)) {
+    return window.quizData;
+  }
+
+  return [];
+}
+
 function AudioPlayer({ src }) {
   const audioRef = React.useRef(null);
   const progressRef = React.useRef(null);
@@ -16,77 +23,78 @@ function AudioPlayer({ src }) {
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   React.useEffect(() => {
-    const a = audioRef.current;
-    if (!a) return;
+    const audio = audioRef.current;
+    if (!audio) return;
 
-    const onLoaded = () => setDuration(a.duration || 0);
-    const onTime = () => setTime(a.currentTime || 0);
+    const onLoaded = () => setDuration(audio.duration || 0);
+    const onTime = () => setTime(audio.currentTime || 0);
 
     const onPlay = () => {
-      if (currentAudio && currentAudio !== a) {
+      if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
       }
-      currentAudio = a;
+
+      currentAudio = audio;
       setIsPlaying(true);
     };
 
     const onPause = () => setIsPlaying(false);
     const onEnded = () => setIsPlaying(false);
 
-    a.addEventListener("loadedmetadata", onLoaded);
-    a.addEventListener("timeupdate", onTime);
-    a.addEventListener("play", onPlay);
-    a.addEventListener("pause", onPause);
-    a.addEventListener("ended", onEnded);
+    audio.addEventListener("loadedmetadata", onLoaded);
+    audio.addEventListener("timeupdate", onTime);
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onEnded);
 
     return () => {
-      a.removeEventListener("loadedmetadata", onLoaded);
-      a.removeEventListener("timeupdate", onTime);
-      a.removeEventListener("play", onPlay);
-      a.removeEventListener("pause", onPause);
-      a.removeEventListener("ended", onEnded);
+      audio.removeEventListener("loadedmetadata", onLoaded);
+      audio.removeEventListener("timeupdate", onTime);
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onEnded);
     };
   }, [src]);
 
   const seek = (seconds) => {
-    const a = audioRef.current;
-    if (!a) return;
+    const audio = audioRef.current;
+    if (!audio) return;
 
-    const maxDuration = a.duration || 0;
-    const target = Math.max(0, Math.min(maxDuration, a.currentTime + seconds));
-    a.currentTime = target;
+    const maxDuration = audio.duration || 0;
+    const target = Math.max(0, Math.min(maxDuration, audio.currentTime + seconds));
+    audio.currentTime = target;
   };
 
   const handleProgressClick = (e) => {
-    const a = audioRef.current;
-    if (!a || !duration || !progressRef.current) return;
+    const audio = audioRef.current;
+    if (!audio || !duration || !progressRef.current) return;
 
     const rect = progressRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const width = rect.width;
     const percent = Math.max(0, Math.min(1, x / width));
 
-    a.currentTime = percent * duration;
+    audio.currentTime = percent * duration;
   };
 
   const togglePlayPause = () => {
-    const a = audioRef.current;
-    if (!a) return;
+    const audio = audioRef.current;
+    if (!audio) return;
 
     if (isPlaying) {
-      a.pause();
+      audio.pause();
     } else {
-      if (currentAudio && currentAudio !== a) {
+      if (currentAudio && currentAudio !== audio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
       }
 
-      const playPromise = a.play();
+      const playPromise = audio.play();
 
       if (playPromise !== undefined) {
-        playPromise.catch((err) => {
-          console.error("Audio play failed:", err);
+        playPromise.catch((error) => {
+          console.error("Audio play failed:", error);
         });
       }
     }
@@ -111,13 +119,17 @@ function AudioPlayer({ src }) {
       </div>
 
       <div className="audio-controls">
-        <button className="audio-btn" onClick={() => seek(-5)}>⏪ -5s</button>
+        <button className="audio-btn" onClick={() => seek(-5)}>
+          ⏪ -5s
+        </button>
 
         <button className="audio-btn" onClick={togglePlayPause}>
           {isPlaying ? "⏸ Pause" : "▶ Play"}
         </button>
 
-        <button className="audio-btn" onClick={() => seek(5)}>+5s ⏩</button>
+        <button className="audio-btn" onClick={() => seek(5)}>
+          +5s ⏩
+        </button>
 
         <span style={{ marginLeft: "auto", fontSize: "0.9em", color: "#666" }}>
           {Math.floor(time)} / {Math.floor(duration)} s
@@ -128,8 +140,7 @@ function AudioPlayer({ src }) {
 }
 
 function QuizApp() {
-  // Important: data.js should define window.quizData
-  const quizData = window.quizData || [];
+  const quizData = getQuizData();
 
   const [selectedParts, setSelectedParts] = React.useState([]);
   const [currentPartIndex, setCurrentPartIndex] = React.useState(0);
@@ -144,32 +155,26 @@ function QuizApp() {
   const [filterType, setFilterType] = React.useState("all");
   const [showTranscript, setShowTranscript] = React.useState({});
 
-  // Show useful message instead of blank white page
   if (!Array.isArray(quizData) || quizData.length === 0) {
     return (
       <div style={{ padding: 30, fontFamily: "Arial, sans-serif" }}>
         <h2>Data failed to load</h2>
+
         <p>
-          Please check whether <strong>data.js</strong> exists and whether it
-          defines <strong>window.quizData</strong>.
+          Please check whether <strong>data.js</strong> exists.
         </p>
 
-        <p>Your data.js should look like this:</p>
+        <p>
+          Your <strong>data.js</strong> should start with:
+        </p>
 
-        <pre
-          style={{
-            background: "#f4f4f4",
-            padding: 15,
-            borderRadius: 8,
-            overflowX: "auto"
-          }}
-        >
+        <pre style={{ background: "#f4f4f4", padding: 15, borderRadius: 8 }}>
 {`window.quizData = [
   {
     id: 1,
     part: 1,
     question: "Question text",
-    audio: "audio/example.mp3",
+    audio: "audio/001.mp3",
     image: "",
     options: ["Option A", "Option B", "Option C"],
     answer: "A",
@@ -178,6 +183,12 @@ function QuizApp() {
   }
 ];`}
         </pre>
+
+        <p>
+          Also make sure there is no <strong>import</strong> or{" "}
+          <strong>export</strong> in <strong>app.js</strong> or{" "}
+          <strong>data.js</strong>.
+        </p>
       </div>
     );
   }
@@ -207,6 +218,7 @@ function QuizApp() {
     if (started) {
       setTimeout(() => {
         const el = document.getElementById("quiz-area");
+
         if (el) {
           el.scrollIntoView({ behavior: "auto", block: "start" });
         }
@@ -309,11 +321,6 @@ function QuizApp() {
     }
   };
 
-  const totalQuestions = allSelectedQuestions.length;
-  const percentage = totalQuestions > 0
-    ? Math.round((score / totalQuestions) * 100)
-    : 0;
-
   const renderResultItem = (q) => {
     const selected = answers[q.id];
     const isCorrect = selected === q.answer;
@@ -342,7 +349,9 @@ function QuizApp() {
         </div>
 
         <div className="result-answer">
-          <p style={{ fontWeight: "bold" }}>{statusText}</p>
+          <p style={{ fontWeight: "bold" }}>
+            {statusText}
+          </p>
 
           {!isCorrect && (
             <p>Your Answer: {selected || "None"}</p>
@@ -361,6 +370,12 @@ function QuizApp() {
       </div>
     );
   };
+
+  const totalQuestions = allSelectedQuestions.length;
+
+  const percentage = totalQuestions > 0
+    ? Math.round((score / totalQuestions) * 100)
+    : 0;
 
   const isLastPart = currentPartIndex === sortedSelectedParts.length - 1;
 
@@ -432,7 +447,9 @@ function QuizApp() {
                       className={`option ${isSelected ? "selected" : ""}`}
                       onClick={() => handleChange(q.id, letterCode)}
                     >
-                      <div className="option-text">{opt}</div>
+                      <div className="option-text">
+                        {opt}
+                      </div>
                     </div>
                   );
                 })}
@@ -479,7 +496,9 @@ function QuizApp() {
       {showModal && (
         <div className="modal">
           <div className="modal-content results-container">
-            <h2 style={{ marginBottom: 20 }}>Results</h2>
+            <h2 style={{ marginBottom: 20 }}>
+              Results
+            </h2>
 
             <div className="score">
               <p>
@@ -526,7 +545,9 @@ function QuizApp() {
 
                 return (
                   <div key={part} className="breakdown-item">
-                    <h4>{PART_NAMES[part] || `Part ${part}`}</h4>
+                    <h4>
+                      {PART_NAMES[part] || `Part ${part}`}
+                    </h4>
 
                     <div
                       style={{
@@ -535,8 +556,13 @@ function QuizApp() {
                         color: "#555"
                       }}
                     >
-                      <span>Score: {stats.correct} / {stats.total}</span>
-                      <span>{pPercent}%</span>
+                      <span>
+                        Score: {stats.correct} / {stats.total}
+                      </span>
+
+                      <span>
+                        {pPercent}%
+                      </span>
                     </div>
 
                     <div
