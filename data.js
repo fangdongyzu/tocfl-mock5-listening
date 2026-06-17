@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     "id": 1,
     "part": 1,
